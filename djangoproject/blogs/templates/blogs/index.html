@@ -1,0 +1,16 @@
+{% extends 'blogs/layout.html' %}
+{% block content %}
+<h3 class="center-align red lighten-5"> {{title}}</h3>
+<dl class="collection">
+{% for blog in blogs %}
+<dt class="collection-item"><a href="/admin/blogs/blogs/{{blog.id}}" >{{blog.title}} </a>
+<dl class="collection">
+<dd class="collection-item"><a href="/admin/blogs/blogs/{{blog.id}}" >{{blog.body}} </a></dd>
+</dl>
+</dt>
+{% endfor %}
+</dl>
+{% endblock %}
+
+
+
